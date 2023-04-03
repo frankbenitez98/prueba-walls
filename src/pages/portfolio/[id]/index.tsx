@@ -67,7 +67,7 @@ const Portfolio = () => {
   const currentItem: MenuItem = menuItems.filter(
     (item) => item.path === "/" + id
   )[0];
-  console.log(currentItem);
+  //console.log(currentItem);
   let maxCards = 0;
   if (currentItem !== menuItems[0]) {
     maxCards = currentItem?.number as number;
