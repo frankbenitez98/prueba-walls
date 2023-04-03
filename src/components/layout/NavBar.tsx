@@ -29,7 +29,7 @@ const NavBar = () => {
   const { asPath } = useRouter();
 
   const DropDown = () => (
-    <>
+    <div className=" w-full">
       {menuItems.map((item) => (
         <li className="nav-item" key={item.title}>
           <Link
@@ -74,7 +74,7 @@ const NavBar = () => {
           BG
         </button>
       </li>
-    </>
+    </div>
   );
 
   return (
@@ -109,7 +109,7 @@ const NavBar = () => {
           leave="transition ease-in-out duration-300 transform"
           leaveFrom="-translate-x-0"
           leaveTo="translate-x-full"
-          className="inset absolute z-50 flex-row pl-5 pt-6 bg-white w-full flex"
+          className="inset fixed z-50 flex-row pl-5 pt-6 bg-white w-full flex"
         >
           <ul className="flex flex-col gap-y-5 lg:gap-y-6">
             <DropDown />
